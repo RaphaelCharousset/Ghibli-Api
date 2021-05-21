@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Studio ghibli</h1>
+    </header>
+    <main>
+        <header class="main-header">
+            <h2>Welcome to this <strong>Studio Ghibli movies</strong> collection</h2>
+            <p>Please, clic on a movie to watch trailer and get further infos !</p>
+            <form action="GET">
+                <legend>Sort per</legend>
+                    <label for="release-in">
+                        release-in
+                        <input type="radio" name="ghibli-movies" value="release-in" id="release-in" checked>
+                    </label>
+                    <label for="alphabetical">
+                        alphabetical
+                        <input type="radio" name="ghibli-movies" value="alphabetical" id="alphabetical">
+                    </label>
+                    <label for="duration">
+                        duration
+                        <input type="radio" name="ghibli-movies" value="duration" id="duration">
+                    </label>
+            </form>
+        </header>
+        <div class="main-container">
+            <div id="container">
+                <!-- ARTICLE DESIGN
+                <article class="hidden">
+                    <h3 class="eng-title"></h3>
+                    <div class="article-header"></div>
+                    <span class="jap-title"></span>
+                    <div class="infos">
+                        <span class="director"></span>
+                        <span class="release-date"></span>
+                        <span class="running-time"></span>
+                    </div>
+                    <p class="description"></p>
+                </article> -->
+            </div>
+            <section class="section">
+                <article>
+                    <h3 class="eng-title"></h3>
+                    <div class="article-header">
+                        <iframe id="frame"
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <span class="jap-title"></span>
+                    <div class="infos">
+                        <span class="director"></span>
+                        <span class="release-date"></span>
+                        <span class="running-time"></span>
+                    </div>
+                    <p class="description"></p>
+
+                    <div class="close"></div>
+                </article>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
