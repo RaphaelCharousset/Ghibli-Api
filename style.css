@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=KoHo:wght@400;700&display=swap");
+:root {
+  font-size: 16px;
+  font-family: "KoHo", sans-serif;
+  --lightBrown: #ffe5b9;
+  --lightBlue: #eff8ff;
+  --lightPurple: #c9cbff;
+  --lightGrey: #a6a9b6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+.header {
+  background-color: #0a0a0a;
+}
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem;
+  color: #e6e6e6;
+}
+
+main header {
+  padding: 1rem;
+  text-align: center;
+}
+main header h2 {
+  font-size: 1.5rem;
+}
+main header h2 strong {
+  font-weight: bold;
+}
+main header p, main header h2 {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: inline-block;
+  padding: 1.5rem;
+  border: 1px solid black;
+  background-color: var(--lightBlue);
+  border-radius: 5px;
+}
+form legend {
+  font-size: 1.5rem;
+  padding: 0 0 1rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+form label {
+  font-size: 1.3rem;
+  padding: 0.2rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+form label:hover {
+  background-color: white;
+}
+
+#container {
+  background: var(--lightBrown);
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 5rem 2rem;
+  margin: 20px auto;
+  padding: 4rem;
+  border-radius: 30px;
+  transition: all 0.5s ease-in-out;
+}
+#container article {
+  width: 25%;
+  height: 400px;
+  min-width: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px var(--lightGrey);
+}
+
+.eng-title, .jap-title {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.eng-title {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.article-header {
+  height: 60%;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--lightBlue);
+  align-content: space-between;
+}
+
+.jap-title {
+  padding: 0.5rem 0;
+  line-height: 1.2;
+}
+
+.infos {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: space-around;
+  text-align: center;
+  background-color: var(--lightPurple);
+}
+.infos .director {
+  width: 100%;
+  font-size: 1.1rem;
+}
+.infos .release-date {
+  padding: 0 1rem;
+}
+.infos .release-date::before {
+  content: "Released in : ";
+}
+.infos .running-time {
+  padding: 0 1rem;
+}
+.infos .running-time::before {
+  content: "Duration : ";
+}
+
+.description {
+  display: none;
+}
+
+.section {
+  position: fixed;
+  top: 96px;
+  right: -100vw;
+  width: 30%;
+  overflow-y: scroll;
+  transition: all 0.4s ease-in-out;
+}
+.section * {
+  cursor: default;
+}
+
+.section article {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.section article .eng-title {
+  font-size: 2rem;
+}
+.section article .article-header {
+  height: 300px;
+}
+.section article .article-header iframe {
+  width: 100%;
+  height: 100%;
+}
+.section article .jap-title {
+  display: block;
+  padding-bottom: 1rem;
+  font-size: 1.7rem;
+}
+.section article .infos, .section article .infos .director {
+  font-size: 1.3rem;
+}
+.section article .director {
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+.section article .infos {
+  padding: 1rem;
+  border-bottom: 2px solid black;
+}
+.section article .description {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: var(--lightPurple);
+}
+.section article .close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background: url("https://c2.staticflickr.com/8/7153/6852073179_00961ba267.jpg") center/100% no-repeat;
+}
+
+/*# sourceMappingURL=style.css.map */
